@@ -4,7 +4,7 @@
   "height": 300,
   "title": "Urban population (% population)",
   "data": {
-    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+    "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
   },
   "transform": [{"filter": "datum.urban_pop > 0 & datum.life_expectancy > 0"}],
   "layer": [

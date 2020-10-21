@@ -4,7 +4,7 @@
   "height": 300,
   "title": "Infant mortality (per 1000 births)",
   "data": {
-    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+    "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
   },
   "transform": [{"filter": "datum.inf_mort > 0 & datum.life_expectancy > 0"}],
   "layer": [
