@@ -150,7 +150,6 @@ A visualisation by Andrew Cao<br>
     <button class="tablinks2" onclick="openChart(event, 'CO2_scatter')">CO2 emissions</button>
     <button class="tablinks2" onclick="openChart(event, 'Power_scatter')">Power consumption</button>
     <button class="tablinks2" onclick="openChart(event, 'Urban_scatter')">Urban population</button>
-    <button class="tablinks2" onclick="openChart(event, 'Literacy_scatter')">Adult literacy rate</button>
   </div>
 
   <div id="Population_scatter" class="tabcontent2">
@@ -183,10 +182,6 @@ A visualisation by Andrew Cao<br>
 
   <div id="Urban_scatter" class="tabcontent2">
     <div id = "vis_urb_sca"></div>
-  </div>
-
-  <div id="Literacy_scatter" class="tabcontent2">
-    <div id = "vis_lit_sca"></div>
   </div>
 
   <script type="text/javascript">
@@ -244,18 +239,11 @@ A visualisation by Andrew Cao<br>
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
-
-  <script type="text/javascript">
-    var spec = "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/literacy_scatter.json";
-    vegaEmbed('#vis_lit_sca', spec).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
    
   </div>
   
 <div class="d">
-*Note that grey values indicate missing data.
+*Note: grey values indicate missing data.
 </div>
   
 </body>

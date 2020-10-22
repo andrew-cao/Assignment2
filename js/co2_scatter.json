@@ -1,37 +1,37 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 300,
-  "height": 200,
+  "width": 400,
+  "height": 267,
   "title": "CO2 Emissions (metric tons per capita)",
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
   },
   "params": [
     {
-    "name": "region_select",
-    "bind": {
-      "name": "Region: ",
-      "input": "select",
-      "options":[
-      null,
-      "East Asia & Pacific",
-      "Europe & Central Asia",
-      "Latin America & Caribbean",
-      "Middle East & North Africa",
-      "North America",
-      "South Asia",
-      "Sub-Saharan Africa"
-      ],
-      "labels":[
-      "Show All",
-      "East Asia & Pacific",
-      "Europe & Central Asia",
-      "Latin America & Caribbean",
-      "Middle East & North Africa",
-      "North America",
-      "South Asia",
-      "Sub-Saharan Africa"
-      ]
+      "name": "region_select",
+      "bind": {
+        "name": "Region: ",
+        "input": "select",
+        "options": [
+          null,
+          "East Asia & Pacific",
+          "Europe & Central Asia",
+          "Latin America & Caribbean",
+          "Middle East & North Africa",
+          "North America",
+          "South Asia",
+          "Sub-Saharan Africa"
+        ],
+        "labels": [
+          "Show All",
+          "East Asia & Pacific",
+          "Europe & Central Asia",
+          "Latin America & Caribbean",
+          "Middle East & North Africa",
+          "North America",
+          "South Asia",
+          "Sub-Saharan Africa"
+        ]
       }
     }
   ],
@@ -39,6 +39,7 @@
     {"filter": "datum.co2_emissions > 0 & datum.life_expectancy > 0"},
     {"filter": "region_select == null || datum.region == region_select"}
   ],
+  "encoding": {},
   "layer": [
     {
       "mark": {"type": "circle", "color": "#78c679"},
@@ -48,7 +49,7 @@
           "title": "CO2 Emissions (metric tons per capita, log scale)",
           "type": "quantitative",
           "scale": {"type": "log"},
-          "axis": {"grid": false, "tickCount":4}
+          "axis": {"grid": false, "tickCount": 4}
         },
         "y": {
           "field": "life_expectancy",
@@ -61,14 +62,14 @@
           {
             "field": "life_expectancy",
             "title": "Life expectancy",
-            "type": "quantitative",            
-            "format":".2f"
+            "type": "quantitative",
+            "format": ".2f"
           },
           {
             "field": "co2_emissions",
             "title": "CO2 Emissions",
             "type": "quantitative",
-            "format":".2f"
+            "format": ".2f"
           }
         ]
       }
@@ -76,36 +77,71 @@
     {
       "mark": {
         "type": "text",
-        "align": "right",
-        "baseline": "line-top",
-        "fontSize": 10
+        "dx": 40,
+        "dy": 90,
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 15,
+        "fontWeight": 600
       },
       "encoding": {
-        "text": {"field": "Country", "type": "nominal"},
-        "color": {"value":"black"},
-        "opacity":{
-          "condition":{
-            "test": "datum.Country == 'Australia' || datum.Country == 'United States'",
-            "value": 1
-          },
-          "value": 0
+        "text": {
+          "aggregate": "mean",
+          "field": "co2_emissions",
+          "type": "quantitative",
+          "format": ".2f"
         },
-        "tooltip": [
-          {"field": "Country", "type": "nominal"},
-          {
-            "field": "life_expectancy",
-            "title": "Life expectancy",
-            "type": "quantitative",
-            "format":".2f"
-          },
-          {
-            "field": "co2_emissions",
-            "title": "CO2 Emissions",
-            "type": "quantitative",
-            "format":".2f"
-          }
-        ]
-        
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 40,
+        "dy": 90,
+        "align": "right",
+        "fontSize": 15
+      },
+      "encoding": {
+        "text": {
+          "aggregate": "min",
+          "value": "Average CO2 emissions: ",
+          "type": "nominal"
+        },
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 40,
+        "dy": 110,
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 15,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "aggregate": "mean",
+          "field": "life_expectancy",
+          "type": "quantitative",
+          "format": ".2f"
+        },
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 40,
+        "dy": 110,
+        "align": "right",
+        "fontSize": 15
+      },
+      "encoding": {
+        "text": {"value": "Average life expectancy: ", "type": "nominal"},
+        "color": {"value": "black"}
       }
     }
   ],
