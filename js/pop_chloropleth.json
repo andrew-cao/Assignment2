@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 300,
+  "width": 300,
+  "height": 200,
   "title": "Population",
   "projection": {"type": "equalEarth"},
   "data": {
@@ -34,9 +34,14 @@
       {
         "field": "life_expectancy",
         "title": "Life expectancy",
-        "type": "quantitative"
+        "type": "quantitative",
+	"format": ".2f"
       },
-      {"field": "pop", "title": "Population", "type": "quantitative"}
+      {"field": "pop", 
+	"title": "Population", 
+	"type": "quantitative",
+	"format": ".2f"
+	}
     ]
   },
   "config": {}

@@ -34,7 +34,8 @@
       {
         "field": "life_expectancy",
         "title": "Life expectancy",
-        "type": "quantitative"
+        "type": "quantitative",
+	"format": ".2f"
       }
     ]
   },

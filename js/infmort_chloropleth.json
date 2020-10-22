@@ -35,9 +35,14 @@
       {
         "field": "life_expectancy",
         "title": "Life expectancy",
-        "type": "quantitative"
+        "type": "quantitative",
+	"format": ".2f"
       },
-      {"field": "inf_mort", "title": "Infant mortality", "type": "quantitative"}
+      {"field": "inf_mort", 
+	"title": "Infant mortality", 
+	"type": "quantitative",
+	"format": ".2f"
+}
     ]
   },
   "config": {}

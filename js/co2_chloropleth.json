@@ -34,12 +34,14 @@
       {
         "field": "life_expectancy",
         "title": "Life expectancy",
-        "type": "quantitative"
+        "type": "quantitative",
+	"format": ".2f"
       },
       {
         "field": "co2_emissions",
         "title": "CO2 emissions",
-        "type": "quantitative"
+        "type": "quantitative",
+	"format": ".2f"
       }
     ]
   },
