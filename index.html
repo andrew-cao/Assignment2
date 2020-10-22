@@ -35,7 +35,6 @@ A visualisation by Andrew Cao<br>
     <button class="tablinks" onclick="openMap(event, 'Population')"id="defaultOpen">Population</button>
     <button class="tablinks" onclick="openMap(event, 'GDP per capita')">GDP per capita</button>
     <button class="tablinks" onclick="openMap(event, 'HDI')">HDI</button>
-    <button class="tablinks" onclick="openMap(event, 'Migration')">Migration</button>
     <button class="tablinks" onclick="openMap(event, 'Infant mortality')">Infant mortality</button>
     <button class="tablinks" onclick="openMap(event, 'CO2 emissions')">CO2 emissons</button>
     <button class="tablinks" onclick="openMap(event, 'Power consumption')">Power consumption</button>
@@ -52,10 +51,6 @@ A visualisation by Andrew Cao<br>
 
   <div id="HDI" class="tabcontent">
       <div id = "vis_hdi_chl"></div>
-  </div> 
-
-  <div id="Migration" class="tabcontent">
-      <div id = "vis_mig_chl"></div>
   </div> 
 
   <div id="Infant mortality" class="tabcontent">
@@ -103,13 +98,6 @@ A visualisation by Andrew Cao<br>
   </script>
 
   <script type="text/javascript">
-    var spec = "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/migration_chloropleth.json";
-    vegaEmbed('#vis_mig_chl', spec).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
-
-  <script type="text/javascript">
     var spec = "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/infmort_chloropleth.json";
     vegaEmbed('#vis_inf_chl', spec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -145,7 +133,6 @@ A visualisation by Andrew Cao<br>
     <button class="tablinks2" onclick="openChart(event, 'Population_scatter')"id="defaultOpen2">Population</button>
     <button class="tablinks2" onclick="openChart(event, 'GDP_scatter')">GDP per capita</button>
     <button class="tablinks2" onclick="openChart(event, 'HDI_scatter')">HDI</button>
-    <button class="tablinks2" onclick="openChart(event, 'Migration_scatter')">Migration</button>
     <button class="tablinks2" onclick="openChart(event, 'Infmort_scatter')">Infant mortality</button>
     <button class="tablinks2" onclick="openChart(event, 'CO2_scatter')">CO2 emissions</button>
     <button class="tablinks2" onclick="openChart(event, 'Power_scatter')">Power consumption</button>
@@ -162,10 +149,6 @@ A visualisation by Andrew Cao<br>
 
   <div id="HDI_scatter" class="tabcontent2">
     <div id = "vis_hdi_sca"></div>
-  </div>
-
-  <div id="Migration_scatter" class="tabcontent2">
-    <div id = "vis_mig_sca"></div>
   </div>
 
   <div id="Infmort_scatter" class="tabcontent2">
@@ -201,13 +184,6 @@ A visualisation by Andrew Cao<br>
   <script type="text/javascript">
     var spec = "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/hdi_scatter.json";
     vegaEmbed('#vis_hdi_sca', spec).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
-
-  <script type="text/javascript">
-    var spec = "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/migration_scatter.json";
-    vegaEmbed('#vis_mig_sca', spec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
