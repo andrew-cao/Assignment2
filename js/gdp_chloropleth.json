@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 300,
+  "width": 300,
+  "height": 200,
   "title": "Gross Domestic Product (per capita, $US)",
   "projection": {"type": "equalEarth"},
   "data": {

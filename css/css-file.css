@@ -31,6 +31,12 @@ font-size: 4;
   margin-right: auto;
 }
 
+.d {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
