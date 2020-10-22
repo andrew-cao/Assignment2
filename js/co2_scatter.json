@@ -6,8 +6,38 @@
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
   },
+  "params": [
+    {
+    "name": "region_select",
+    "bind": {
+      "name": "Region: ",
+      "input": "select",
+      "options":[
+      null,
+      "East Asia & Pacific",
+      "Europe & Central Asia",
+      "Latin America & Caribbean",
+      "Middle East & North Africa",
+      "North America",
+      "South Asia",
+      "Sub-Saharan Africa"
+      ],
+      "labels":[
+      "Show All",
+      "East Asia & Pacific",
+      "Europe & Central Asia",
+      "Latin America & Caribbean",
+      "Middle East & North Africa",
+      "North America",
+      "South Asia",
+      "Sub-Saharan Africa"
+      ]
+      }
+    }
+  ],
   "transform": [
-    {"filter": "datum.co2_emissions > 0 & datum.life_expectancy > 0"}
+    {"filter": "datum.co2_emissions > 0 & datum.life_expectancy > 0"},
+    {"filter": "region_select == null || datum.region == region_select"}
   ],
   "layer": [
     {
@@ -18,7 +48,7 @@
           "title": "CO2 Emissions (metric tons per capita, log scale)",
           "type": "quantitative",
           "scale": {"type": "log"},
-          "axis": {"grid": false}
+          "axis": {"grid": false, "tickCount":4}
         },
         "y": {
           "field": "life_expectancy",
@@ -31,14 +61,51 @@
           {
             "field": "life_expectancy",
             "title": "Life expectancy",
-            "type": "quantitative"
+            "type": "quantitative",            
+            "format":".2f"
           },
           {
             "field": "co2_emissions",
             "title": "CO2 Emissions",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format":".2f"
           }
         ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "line-top",
+        "fontSize": 10
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value":"black"},
+        "opacity":{
+          "condition":{
+            "test": "datum.Country == 'Australia' || datum.Country == 'United States'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative",
+            "format":".2f"
+          },
+          {
+            "field": "co2_emissions",
+            "title": "CO2 Emissions",
+            "type": "quantitative",
+            "format":".2f"
+          }
+        ]
+        
       }
     }
   ],
