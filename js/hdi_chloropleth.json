@@ -40,7 +40,7 @@
       {"field": "hdi", 
 	"title": "HDI", 
 	"type": "quantitative",
-	"format": ".2f"s
+	"format": ".2f"
 	}
     ]
   },
