@@ -70,13 +70,13 @@ p3 {
 }
 
 .le_outer_container {
-	width: 400px;
+	width: 760px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .le_inner_container {
-	padding-left: 10px;
+	padding-left: 1px;
 }
 
 .tab {
