@@ -1,20 +1,21 @@
 h1 {
 	font-size: 10;
-	font: sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 p1 {
-    padding-bottom: 20px;
-    font: sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 
 p2 {
 	font-size: 6;
+	font-family: "Open Sans", sans-serif;
 }
 
 p3 {
 	font-size: 6;
+	font-family: "Open Sans", sans-serif;
 }
 
 .grid-container {
@@ -27,22 +28,19 @@ p3 {
 
 .title {
   text-align: center;
-  padding-bottom: 20px;
-  font: sans-serif;
+  padding-bottom: 15px;
 }
 
 .a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font: sans-serif;
 }
 
 .b {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font: sans-serif;
   padding-bottom: 30px;
 }
 
@@ -50,22 +48,21 @@ p3 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font: sans-serif;
 }
 
 .d {
 	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 30px;
 	text-align: justify;
 }
 
 .e {
 	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 30px;
 	text-align: justify;
 }
 
@@ -73,10 +70,11 @@ p3 {
 	width: 760px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 10px;
 }
 
 .le_inner_container {
-	padding-left: 1px;
+	padding-left: 10%;
 }
 
 .tab {
