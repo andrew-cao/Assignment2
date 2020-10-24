@@ -8,11 +8,8 @@ p1 {
   font: sans-serif;
 }
 
-p2 {
-	
-}
 
-p3 {
+p2 {
 	padding-top: 20px;
 	font-size: 6;
 	text-align: justify;
@@ -20,7 +17,7 @@ p3 {
 	margin-right: 15%;
 }
 
-p4 {
+p3 {
 	padding-top: 20px;
 	font-size: 6;
 	text-align: justify;
@@ -73,7 +70,11 @@ p4 {
 
 .e {
 	max-width: 80%;
-	
+}
+
+.f {
+	margin-left: 55%;
+	margin-right: 45%;
 }
 
 .tab {
