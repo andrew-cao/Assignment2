@@ -17,6 +17,7 @@ p3 {
 	text-align: justify;
 	margin-left: 15%;
 	margin-right: 15%;
+	max-width: 80%;
 }
 
 p4 {
@@ -24,6 +25,7 @@ p4 {
 	text-align: justify;
 	margin-left: 15%;
 	margin-right: 15%;
+	max-width: 80%;
 }
 
 .grid-container {
@@ -99,6 +101,7 @@ p4 {
   border-top: none;
   margin-left: auto;
   margin-right: auto;
+  height: 250px;
 }
 
 .tabcontent2 {
@@ -108,4 +111,5 @@ p4 {
   border-top: none;
   margin-left: auto;
   margin-right: auto;
+  height: 250px;
 }
