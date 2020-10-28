@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-  "title": "CO2 emissions (metric tons per capita)",
+  "title": {"text":"CO2 emissions (metric tons per capita)","fontWeight":400},
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/world.topo.json",
@@ -26,6 +26,7 @@
       "condition": {"test": "datum.co2_emissions == 0", "value": "grey"},
       "field": "co2_emissions",
       "title": "CO2 emissions",
+      "legend":{"titleFontWeight":400},
       "type": "quantitative",
       "scale": {"type": "linear", "range": ["#ffffe5", "#006837"]}
     },
