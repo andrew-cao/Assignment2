@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-  "title": "Population",
+  "title": {"text":"Population","fontWeight":400, "fontSize":14},
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/world.topo.json",
@@ -26,6 +26,7 @@
       "condition": {"test": "datum.pop == 0", "value": "grey"},
       "field": "pop",
       "title": "Population",
+      "legend": {"titleFontWeight":400},
       "type": "quantitative",
       "scale": {"type": "log", "scheme": "teals"}
     },

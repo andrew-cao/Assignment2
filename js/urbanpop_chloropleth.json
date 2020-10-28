@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-  "title": "Urban population (as % total population)",
+  "title": {"text":"Urban population (as % total population)","fontWeight":400, "fontSize":14},
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/world.topo.json",
@@ -26,6 +26,7 @@
       "condition": {"test": "datum.urban_pop == 0", "value": "grey"},
       "field": "urban_pop",
       "title": "Urban population",
+      "legend": {"titleFontWeight":400},
       "type": "quantitative",
       "scale": {"type": "linear", "scheme": "purpleblue"}
     },

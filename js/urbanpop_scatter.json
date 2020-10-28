@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-  "title": "Urban population (% population)",
+  "title": {"text":"Urban population (% population)","fontWeight":400, "fontSize":14},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
   },
@@ -47,13 +47,13 @@
           "field": "urban_pop",
           "title": "Urban population (% population)",
           "type": "quantitative",
-          "axis": {"grid": false}
+          "axis": {"grid": false, "titleFontWeight":400}
         },
         "y": {
           "field": "life_expectancy",
           "title": "Life expectancy",
           "type": "quantitative",
-          "axis": {"grid": false}
+          "axis": {"grid": false, "titleFontWeight":400}
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},

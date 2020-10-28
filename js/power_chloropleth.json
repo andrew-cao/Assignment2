@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-  "title": "Electric power consumption (kWh per capita)",
+  "title": {"text":"Electric power consumption (kWh per capita)","fontWeight":400, "fontSize":14},
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/world.topo.json",
@@ -26,6 +26,7 @@
       "condition": {"test": "datum.power_consumption == 0", "value": "grey"},
       "field": "power_consumption",
       "title": "Electric power consumption",
+      "legend": {"titleFontWeight":400},
       "type": "quantitative",
       "scale": {"type": "log", "scheme": "darkgold", "reverse": true}
     },

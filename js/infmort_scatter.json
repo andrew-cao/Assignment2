@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 300,
   "height": 200,
-  "title": "Infant mortality (per 1000 births)",
+  "title": {"text":"Infant mortality (per 1000 births)","fontWeight":400, "fontSize":14},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
   },
@@ -48,13 +48,13 @@
           "title": "Infant mortality (per 1000 births, log scale)",
           "type": "quantitative",
           "scale": {"type": "log"},
-          "axis": {"grid": false, "tickCount": 3}
+          "axis": {"grid": false, "tickCount": 3, "titleFontWeight":400}
         },
         "y": {
           "field": "life_expectancy",
           "title": "Life expectancy",
           "type": "quantitative",
-          "axis": {"grid": false}
+          "axis": {"grid": false, "titleFontWeight":400}
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
