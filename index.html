@@ -22,13 +22,9 @@
  
 </div>
  
-<div class="le_outer_container">
+<div class="le_container">
 
-	<div class="le_inner_container">
-
-		<div id="vis"></div>
-
-	</div>
+	<div id="vis"></div>
 
 </div>
   
@@ -51,30 +47,51 @@
 
 	  <div id="Population" class="tabcontent">
 		<div id = "vis_pop_chl"></div>
+		<p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div>
 
 	  <div id="GDP per capita" class="tabcontent">
-		  <div id = "vis_gdp_chl"></div>
+		<div id = "vis_gdp_chl"></div>
+		<p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div>
 
 	  <div id="HDI" class="tabcontent">
-		  <div id = "vis_hdi_chl"></div>
+		<div id = "vis_hdi_chl"></div>
+		<p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div> 
 
 	  <div id="Infant mortality" class="tabcontent">
 		  <div id = "vis_inf_chl"></div>
+		  <p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div> 
 
 	  <div id="CO2 emissions" class="tabcontent">
 		  <div id = "vis_co2_chl"></div>
+		  <p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div> 
 
 	  <div id="Power consumption" class="tabcontent">
 		  <div id = "vis_pow_chl"></div>
+		  <p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div> 
 
 	  <div id="Urban population" class="tabcontent">
 		  <div id = "vis_urb_chl"></div>
+		  <p4>
+		<br>Note: grey values indicate missing data. 
+		</p4>
 	  </div> 
 
 	  <script type="text/javascript">
@@ -132,7 +149,7 @@
 		  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 		}).catch(console.error);
 	  </script>
-    
+	
 	</div>
   
 
@@ -240,7 +257,6 @@
 		<p2>
 		
 			The above chloropleth chart uses darker colours to show greater values, with the exception of infant mortality, as smaller values are more desirable for infant mortality.
-			Note that grey colouring denotes missing data.
 			Hover over each country to see that country's name, life expectancy and country factor value.
 		
 		</p2>
@@ -263,6 +279,13 @@
   
   </div>
 </div>
+ 
+ 
+<div class="f">
+	<p5>
+	Sources: <a href="https://data.worldbank.org/indicator/">The World Bank</a> and <a href="http://hdr.undp.org/en/data#">UN</a>
+	</p5>
+</div> 
  
   
 </body>

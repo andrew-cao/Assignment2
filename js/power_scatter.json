@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 300,
-  "height": 200,
+  "width": 510,
+  "height": 340,
   "title": {"text":"Electric power consumption (kWh per capita)","fontWeight":400, "fontSize":14},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
@@ -39,23 +39,25 @@
     {"filter": "datum.power_consumption > 0 & datum.life_expectancy > 0"},
     {"filter": "region_select == null || datum.region == region_select"}
   ],
+  "encoding":{
+    "x": {
+            "field": "power_consumption",
+            "title": "Electric power consumption (kWh per capita, log scale)",
+            "type": "quantitative",
+            "scale": {"type": "log"},
+            "axis": {"grid": false, "tickCount": 4, "titleFontWeight":400, "titleFontSize": 14}
+    },
+    "y": {
+      "field": "life_expectancy",
+      "title": "Life expectancy",
+      "type": "quantitative",
+      "axis": {"grid": false,  "titleFontWeight":400, "titleFontSize": 14}
+    }
+  },
   "layer": [
     {
-      "mark": {"type": "circle", "color": "#907b0e"},
+      "mark": {"type": "circle", "color": "#907b0e", "size":50},
       "encoding": {
-        "x": {
-          "field": "power_consumption",
-          "title": "Electric power consumption (kWh per capita, log scale)",
-          "type": "quantitative",
-          "scale": {"type": "log"},
-          "axis": {"grid": false, "tickCount": 4, "titleFontWeight":400}
-        },
-        "y": {
-          "field": "life_expectancy",
-          "title": "Life expectancy",
-          "type": "quantitative",
-          "axis": {"grid": false,  "titleFontWeight":400}
-        },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {
@@ -76,73 +78,34 @@
     {
       "mark": {
         "type": "text",
-        "dx": 40,
-        "dy": 75,
-        "align": "left",
-        "baseline": "middle",
+        "align": "center",
         "fontSize": 12,
-        "fontWeight": 600
+        "dy": -12
       },
       "encoding": {
         "text": {
-          "aggregate": "mean",
-          "field": "power_consumption",
-          "type": "quantitative",
-          "format": ".2f"
+          "field": "Country", "type":"nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum.Country == 'Gabon' || datum.Country == 'Sri Lanka' || datum.Country == 'Ethiopia' || datum.Country == 'Iceland' || datum.Country == 'Nigeria' || datum.Country == 'Australia'|| datum.Country == 'Italy'", "value": 1
+          }, "value": 0
         },
-        "color": {"value": "black"}
-      }
-    },
-    {
-      "transform": [{"sample": 1}],
-      "mark": {
-        "type": "text",
-        "dx": 40,
-        "dy": 75,
-        "align": "right",
-        "fontSize": 12
-      },
-      "encoding": {
-        "text": {
-          "aggregate": "min",
-          "value": "Average power consumption: ",
-          "type": "nominal"
-        },
-        "color": {"value": "black"}
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "dx": 40,
-        "dy": 90,
-        "align": "left",
-        "baseline": "middle",
-        "fontSize": 12,
-        "fontWeight": 600
-      },
-      "encoding": {
-        "text": {
-          "aggregate": "mean",
-          "field": "life_expectancy",
-          "type": "quantitative",
-          "format": ".2f"
-        },
-        "color": {"value": "black"}
-      }
-    },
-    {
-      "transform": [{"sample": 1}],
-      "mark": {
-        "type": "text",
-        "dx": 40,
-        "dy": 90,
-        "align": "right",
-        "fontSize": 12
-      },
-      "encoding": {
-        "text": {"value": "Average life expectancy: ", "type": "nominal"},
-        "color": {"value": "black"}
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "power_consumption",
+            "title": "Electric power consumption",
+            "type": "quantitative",
+            "format": ".2f"
+          }
+        ]
       }
     }
   ],

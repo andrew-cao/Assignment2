@@ -1,49 +1,58 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 300,
-  "height": 200,
+  "width": 510,
+  "height": 340,
   "title": {"text":"Population","fontWeight":400, "fontSize":14},
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/world.topo.json",
     "format": {"type": "topojson", "feature": "custom"}
   },
-  "transform": [
+  "transform":[
     {
-      "lookup": "properties.name",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
+    "lookup": "properties.name",
+    "from": {
+      "data": {
+        "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/data/dataset.csv"
+      },
+      "key": "Country",
+      "fields": ["pop", "life_expectancy"]
+    }
+  }],
+  "layer":[
+    {
+      "mark": {"type": "geoshape", "fill":"gray"}
+    },
+    {
+      "transform": [
+        {"calculate": "(datum.life_expectancy == 0 ? 'N/A' : datum.life_expectancy)", "as": "le"},
+        {"calculate": "(datum.pop == 0 ? 'N/A' : datum.pop)", "as": "p"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth":0.2},
+      "encoding": {
+        "color": {
+          "field": "p",
+          "title": "Population",
+          "legend": {"titleFontWeight":400},
+          "type": "quantitative",
+          "scale": {"type": "log", "scheme": "teals"}
         },
-        "key": "Country",
-        "fields": ["pop", "life_expectancy"]
+        "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {
+          "field": "le",
+          "title": "Life expectancy",
+          "type": "quantitative",
+          "format": ".2f"
+        },
+        {
+          "field": "p",
+          "title": "Population",
+          "type": "quantitative",
+          "format": ".4s"
+        }
+        ]
       }
     }
-  ],
-  "mark": {"type": "geoshape"},
-  "encoding": {
-    "color": {
-      "condition": {"test": "datum.pop == 0", "value": "grey"},
-      "field": "pop",
-      "title": "Population",
-      "legend": {"titleFontWeight":400},
-      "type": "quantitative",
-      "scale": {"type": "log", "scheme": "teals"}
-    },
-    "tooltip": [
-      {"field": "properties.name", "type": "nominal", "title": "Country"},
-      {
-        "field": "life_expectancy",
-        "title": "Life expectancy",
-        "type": "quantitative",
-	"format": ".2f"
-      },
-      {"field": "pop", 
-	"title": "Population", 
-	"type": "quantitative",
-	"format": ".2f"
-	}
-    ]
-  },
-  "config": {}
+  ]
 }

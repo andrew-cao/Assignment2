@@ -1,25 +1,45 @@
-body {
-	font-family: "Open Sans", sans-serif;
+
+
+*{
+	font-family: Arial, sans-serif;
 }
 
 h1 {
 	font-size: 10;
-	font-family: "Open Sans", sans-serif;
+	font-family: Arial, sans-serif;
+}
+
+h2 {
+	font-size: 6;
+	font-family: Arial, sans-serif;
 }
 
 p1 {
-    font-family: "Open Sans", sans-serif;
+	font-size: 10;
+    font-family: Arial, sans-serif;
 }
 
 
 p2 {
 	font-size: 6;
-	font-family: "Open Sans", sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 p3 {
 	font-size: 6;
-	font-family: "Open Sans", sans-serif;
+	font-family: Arial, sans-serif;
+}
+
+p4 {
+	font-size: 6;
+	font-family: Arial, sans-serif;
+}
+
+p5 {
+	font-size: 4;
+	font-family: Arial, sans-serif;
+	font-weight: 200;
+	color: #807F7F;
 }
 
 .grid-container {
@@ -33,12 +53,6 @@ p3 {
 .title {
   text-align: center;
   padding-bottom: 15px;
-}
-
-.a {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .b {
@@ -70,31 +84,28 @@ p3 {
 	text-align: justify;
 }
 
-.le_outer_container {
-	width: 760px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 10px;
-}
-
-.le_inner_container {
-	padding-left: 10%;
+.f {
+	padding-top: 15px;
+	padding-left: 5%;
 }
 
 .tab {
+  text-align: center;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
 .tab button {
+	text-align: center;
+	font-size: 8;
   background-color: inherit;
   margin-left: auto;
   margin-right: auto;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px 12px;
+  padding: 8px 10px;
   transition: 0.3s;
 }
 
