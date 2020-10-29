@@ -5,26 +5,21 @@
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 50px;
 	font-family: serif;
 	font-weight: 700;
 	color: #FF5733;
 }
 
 h2 {
-	font-size: 15px;
+	font-size: 18px;
 	font-family: serif;
 	color: #FF5733;
 }
 
-p1 {
-	font-size: 16px;
-    font-family: Arial, sans-serif;
-	font-weight: 600;
-}
 
 p3 {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: Arial, sans-serif;
 }
 
@@ -68,26 +63,24 @@ p5 {
   height: 500px;
 }
 
-.b {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20px;
-}
-
 .c {
 	text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .d {
 	text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
 .e {
-	padding-top: 15px;
+	padding-top: 70px;
 	padding-left: 10%;
 	padding-right: 20%;
 	padding-bottom: 30px;
@@ -134,7 +127,7 @@ p5 {
   border-top: none;
   margin-left: auto;
   margin-right: auto;
-  height: 850px;
+  height: 440px;
 }
 
 .tabcontent2 {
@@ -144,5 +137,5 @@ p5 {
   border-top: none;
   margin-left: auto;
   margin-right: auto;
-  height: 850px;`
+  height: 440px;`
 }
