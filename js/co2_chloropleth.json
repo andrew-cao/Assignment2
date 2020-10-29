@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 510,
   "height": 340,
-  "title": {"text":"CO2 emissions (metric tons per capita)","fontWeight":400, "fontSize":14},
+  "title": {"text":"CO2 emissions (metric tons per capita)","fontWeight":400, "fontSize":20},
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/Assignment2/main/js/world.topo.json",
